@@ -11,7 +11,7 @@
 		59EE5AE21E90D08F00CD2CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5AE11E90D08F00CD2CC7 /* ViewController.swift */; };
 		59EE5AE51E90D08F00CD2CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AE31E90D08F00CD2CC7 /* Main.storyboard */; };
 		59EE5AE71E90D08F00CD2CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AE61E90D08F00CD2CC7 /* Assets.xcassets */; };
-		59EE5AEA1E90D08F00CD2CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AE81E90D08F00CD2CC7 /* LaunchScreen.storyboard */; };
+		59EE5AF31E90E1D500CD2CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AF11E90E1D500CD2CC7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		59EE5AE11E90D08F00CD2CC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59EE5AE41E90D08F00CD2CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59EE5AE61E90D08F00CD2CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59EE5AE91E90D08F00CD2CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59EE5AEB1E90D08F00CD2CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EE5AF21E90E1D500CD2CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				59EE5AE11E90D08F00CD2CC7 /* ViewController.swift */,
 				59EE5AE31E90D08F00CD2CC7 /* Main.storyboard */,
 				59EE5AE61E90D08F00CD2CC7 /* Assets.xcassets */,
-				59EE5AE81E90D08F00CD2CC7 /* LaunchScreen.storyboard */,
+				59EE5AF11E90E1D500CD2CC7 /* LaunchScreen.storyboard */,
 				59EE5AEB1E90D08F00CD2CC7 /* Info.plist */,
 			);
 			path = DouYu;
@@ -123,7 +123,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59EE5AEA1E90D08F00CD2CC7 /* LaunchScreen.storyboard in Resources */,
+				59EE5AF31E90E1D500CD2CC7 /* LaunchScreen.storyboard in Resources */,
 				59EE5AE71E90D08F00CD2CC7 /* Assets.xcassets in Resources */,
 				59EE5AE51E90D08F00CD2CC7 /* Main.storyboard in Resources */,
 			);
@@ -152,10 +152,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		59EE5AE81E90D08F00CD2CC7 /* LaunchScreen.storyboard */ = {
+		59EE5AF11E90E1D500CD2CC7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				59EE5AE91E90D08F00CD2CC7 /* Base */,
+				59EE5AF21E90E1D500CD2CC7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -262,12 +262,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DouYu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchong.DouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -275,12 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DouYu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangchong.DouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
