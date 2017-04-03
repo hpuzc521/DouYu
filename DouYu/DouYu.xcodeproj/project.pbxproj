@@ -15,6 +15,12 @@
 		59EE5AFF1E916A1E00CD2CC7 /* Focus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AFE1E916A1E00CD2CC7 /* Focus.storyboard */; };
 		59EE5B011E916A3400CD2CC7 /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5B001E916A3400CD2CC7 /* Discovery.storyboard */; };
 		59EE5B031E916A5C00CD2CC7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5B021E916A5C00CD2CC7 /* Mine.storyboard */; };
+		59EE5B241E921A9A00CD2CC7 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B231E921A9A00CD2CC7 /* MainTabViewController.swift */; };
+		59EE5B261E921AD000CD2CC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B251E921AD000CD2CC7 /* HomeViewController.swift */; };
+		59EE5B281E921AE400CD2CC7 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B271E921AE400CD2CC7 /* LiveViewController.swift */; };
+		59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B291E921AF600CD2CC7 /* FocusViewController.swift */; };
+		59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B2B1E921B0700CD2CC7 /* DiscoveryViewController.swift */; };
+		59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		59EE5AFE1E916A1E00CD2CC7 /* Focus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Focus.storyboard; path = DouYu/Focus/Focus.storyboard; sourceTree = SOURCE_ROOT; };
 		59EE5B001E916A3400CD2CC7 /* Discovery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discovery.storyboard; path = DouYu/Discovery/Discovery.storyboard; sourceTree = SOURCE_ROOT; };
 		59EE5B021E916A5C00CD2CC7 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mine.storyboard; path = DouYu/Mine/Mine.storyboard; sourceTree = SOURCE_ROOT; };
+		59EE5B231E921A9A00CD2CC7 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		59EE5B251E921AD000CD2CC7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		59EE5B271E921AE400CD2CC7 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		59EE5B291E921AF600CD2CC7 /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		59EE5B2B1E921B0700CD2CC7 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5AE31E90D08F00CD2CC7 /* Main.storyboard */,
+				59EE5B231E921A9A00CD2CC7 /* MainTabViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -85,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5B021E916A5C00CD2CC7 /* Mine.storyboard */,
+				59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -93,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5B001E916A3400CD2CC7 /* Discovery.storyboard */,
+				59EE5B2B1E921B0700CD2CC7 /* DiscoveryViewController.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -101,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5AFE1E916A1E00CD2CC7 /* Focus.storyboard */,
+				59EE5B291E921AF600CD2CC7 /* FocusViewController.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5AFA1E9169C900CD2CC7 /* Home.storyboard */,
+				59EE5B251E921AD000CD2CC7 /* HomeViewController.swift */,
 			);
 			path = "Home ";
 			sourceTree = "<group>";
@@ -117,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5AFC1E916A0200CD2CC7 /* Live.storyboard */,
+				59EE5B271E921AE400CD2CC7 /* LiveViewController.swift */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -198,6 +216,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EE5AE01E90D08F00CD2CC7 /* AppDelegate.swift in Sources */,
+				59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */,
+				59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */,
+				59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */,
+				59EE5B241E921A9A00CD2CC7 /* MainTabViewController.swift in Sources */,
+				59EE5B281E921AE400CD2CC7 /* LiveViewController.swift in Sources */,
+				59EE5B261E921AD000CD2CC7 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +384,7 @@
 				59EE5AF01E90D08F00CD2CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
