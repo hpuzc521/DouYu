@@ -21,6 +21,8 @@
 		59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B291E921AF600CD2CC7 /* FocusViewController.swift */; };
 		59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B2B1E921B0700CD2CC7 /* DiscoveryViewController.swift */; };
 		59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */; };
+		59EE5B331E936E2800CD2CC7 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */; };
+		59EE5B351E93733D00CD2CC7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B341E93733D00CD2CC7 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		59EE5B291E921AF600CD2CC7 /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		59EE5B2B1E921B0700CD2CC7 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		59EE5B341E93733D00CD2CC7 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				59EE5AF71E91698400CD2CC7 /* Focus */,
 				59EE5AF61E91698400CD2CC7 /* Discovery */,
 				59EE5AF51E91698400CD2CC7 /* Mine */,
+				59EE5B2F1E936D0E00CD2CC7 /* Public */,
+				59EE5B301E936D0E00CD2CC7 /* Tools */,
 				59EE5ADF1E90D08F00CD2CC7 /* AppDelegate.swift */,
 				59EE5AE61E90D08F00CD2CC7 /* Assets.xcassets */,
 				59EE5AEB1E90D08F00CD2CC7 /* Info.plist */,
@@ -137,6 +143,30 @@
 				59EE5B271E921AE400CD2CC7 /* LiveViewController.swift */,
 			);
 			path = Live;
+			sourceTree = "<group>";
+		};
+		59EE5B2F1E936D0E00CD2CC7 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				59EE5B311E936D2800CD2CC7 /* View */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		59EE5B301E936D0E00CD2CC7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				59EE5B341E93733D00CD2CC7 /* Common.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		59EE5B311E936D2800CD2CC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EE5B331E936E2800CD2CC7 /* PageTitleView.swift in Sources */,
 				59EE5AE01E90D08F00CD2CC7 /* AppDelegate.swift in Sources */,
 				59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */,
 				59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */,
+				59EE5B351E93733D00CD2CC7 /* Common.swift in Sources */,
 				59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */,
 				59EE5B241E921A9A00CD2CC7 /* MainTabViewController.swift in Sources */,
 				59EE5B281E921AE400CD2CC7 /* LiveViewController.swift in Sources */,
