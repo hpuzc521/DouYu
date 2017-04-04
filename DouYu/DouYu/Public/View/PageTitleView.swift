@@ -13,6 +13,8 @@ private let kLineH: CGFloat = 0.5
 class PageTitleView: UIView {
     
     fileprivate var titles: [String]
+    fileprivate var selectLabel: UILabel?
+    fileprivate lazy var titleLabels = [UILabel]()
     
     //MARK:- 懒加载scrollView
     fileprivate lazy var scrollView: UIScrollView = {
@@ -22,6 +24,14 @@ class PageTitleView: UIView {
         scrollView.bounces = false
         
         return scrollView
+    }()
+    
+    //MARK:- 滑块
+    fileprivate lazy var scrollLine: UIView = {
+        let scrollLine = UIView()
+        scrollLine.backgroundColor = UIColor.orange
+        
+        return scrollLine
     }()
 
     //MARK:- 构造方法
@@ -47,12 +57,8 @@ extension PageTitleView{
         self.addSubview(scrollView)
         scrollView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - kLineH)
         
-        let lineView = UIView(frame: CGRect(x: 0, y: scrollView.bounds.height, width: bounds.width, height: kLineH))
-        lineView.backgroundColor = UIColor.lightGray
-        
-        self.addSubview(lineView)
-        
         setupTitleLabels()
+        setupBottomLine()
     }
     
     private func setupTitleLabels(){
@@ -68,7 +74,47 @@ extension PageTitleView{
             label.font = UIFont.systemFont(ofSize: 16)
             label.textAlignment = NSTextAlignment.center
             
+            //添加手势
+            label.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(titleLabelTab(tabGes:)))
+            label.addGestureRecognizer(tapGesture)
+            
+            self.titleLabels.append(label)
             self.scrollView.addSubview(label)
         }
+    }
+    
+    @objc private func titleLabelTab(tabGes: UITapGestureRecognizer){
+        guard let label = tabGes.view as? UILabel else{return}
+        
+        if label == selectLabel {
+            return
+        }
+        
+        selectLabel?.textColor = UIColor.darkGray
+        label.textColor = UIColor.orange
+        selectLabel = label
+        
+        UIView.animate(withDuration: 0.25) {
+            self.scrollLine.center.x = label.center.x
+        }
+    }
+    
+    private func setupBottomLine(){
+        //底部横线
+        let lineView = UIView(frame: CGRect(x: 0, y: scrollView.bounds.height, width: bounds.width, height: kLineH))
+        lineView.backgroundColor = UIColor.lightGray
+        
+        self.addSubview(lineView)
+        
+        let scrollLineH: CGFloat = 4
+        let scrollLineW: CGFloat = frame.width / CGFloat(titles.count) *  (3 / 4)
+        let firstLabel = self.titleLabels[0]
+        firstLabel.textColor = UIColor.orange
+        self.selectLabel = firstLabel
+        
+        scrollLine.frame = CGRect(x: 0, y: frame.height - scrollLineH, width: scrollLineW, height: scrollLineH)
+        scrollLine.center.x = firstLabel.center.x
+        scrollView.addSubview(scrollLine)
     }
 }
