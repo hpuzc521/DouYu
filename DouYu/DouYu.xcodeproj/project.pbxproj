@@ -23,6 +23,8 @@
 		59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */; };
 		59EE5B331E936E2800CD2CC7 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */; };
 		59EE5B351E93733D00CD2CC7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B341E93733D00CD2CC7 /* Common.swift */; };
+		59EE5B371E95441300CD2CC7 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B361E95441300CD2CC7 /* PageContentView.swift */; };
+		59EE5B3A1E954D4E00CD2CC7 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5B391E954D4E00CD2CC7 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		59EE5B2D1E921B1600CD2CC7 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		59EE5B341E93733D00CD2CC7 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		59EE5B361E95441300CD2CC7 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		59EE5B391E954D4E00CD2CC7 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		59EE5B301E936D0E00CD2CC7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				59EE5B381E954D1A00CD2CC7 /* Extension */,
 				59EE5B341E93733D00CD2CC7 /* Common.swift */,
 			);
 			path = Tools;
@@ -165,8 +170,17 @@
 			isa = PBXGroup;
 			children = (
 				59EE5B321E936E2800CD2CC7 /* PageTitleView.swift */,
+				59EE5B361E95441300CD2CC7 /* PageContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		59EE5B381E954D1A00CD2CC7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				59EE5B391E954D4E00CD2CC7 /* UIColor-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,12 +262,14 @@
 				59EE5B331E936E2800CD2CC7 /* PageTitleView.swift in Sources */,
 				59EE5AE01E90D08F00CD2CC7 /* AppDelegate.swift in Sources */,
 				59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */,
+				59EE5B371E95441300CD2CC7 /* PageContentView.swift in Sources */,
 				59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */,
 				59EE5B351E93733D00CD2CC7 /* Common.swift in Sources */,
 				59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */,
 				59EE5B241E921A9A00CD2CC7 /* MainTabViewController.swift in Sources */,
 				59EE5B281E921AE400CD2CC7 /* LiveViewController.swift in Sources */,
 				59EE5B261E921AD000CD2CC7 /* HomeViewController.swift in Sources */,
+				59EE5B3A1E954D4E00CD2CC7 /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
