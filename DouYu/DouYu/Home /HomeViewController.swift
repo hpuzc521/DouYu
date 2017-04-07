@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
         let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kPageTitleH)
         
         let titleView = PageTitleView(frame: frame, titles: titles)
+        titleView.delegate = self
         
         return titleView
     }()
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController {
         }
         
         let pageContentView = PageContentView(frame: frame, childVCs: childVCs)
+        pageContentView.delegate = self
         
         return pageContentView
     }()
@@ -97,5 +99,20 @@ extension HomeViewController{
         let barButtonItem = UIBarButtonItem(customView: btn)
         
         return barButtonItem
+    }
+}
+
+
+//MARK:- PageTitleViewDelegate
+extension HomeViewController: PageTitleViewDelegate{
+    func pageTitleViewClicked(titleView: PageTitleView, index: Int) {
+        pageContentView.scrollToPageItem(index: index)
+    }
+}
+
+//MARK:- PageContentViewDelegate
+extension HomeViewController: PageContentViewDelegate{
+    func pageContentView(_ pageContentView: PageContentView, sourceItem: Int, targetItem: Int, process: CGFloat) {
+        pageTitleView.pageTitleView(fromIndex: sourceItem, toIndex: targetItem, process: process)
     }
 }

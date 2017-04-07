@@ -10,11 +10,17 @@ import UIKit
 
 private let kLineH: CGFloat = 0.5
 
+protocol PageTitleViewDelegate: class {
+    func pageTitleViewClicked(titleView: PageTitleView, index: Int)
+}
+
 class PageTitleView: UIView {
     
     fileprivate var titles: [String]
     fileprivate var selectLabel: UILabel?
     fileprivate lazy var titleLabels = [UILabel]()
+    
+    weak var delegate: PageTitleViewDelegate?
     
     //MARK:- 懒加载scrollView
     fileprivate lazy var scrollView: UIScrollView = {
@@ -47,6 +53,7 @@ class PageTitleView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 //MARK:- 设置UI
@@ -73,6 +80,7 @@ extension PageTitleView{
             label.textColor = UIColor.darkGray
             label.font = UIFont.systemFont(ofSize: 16)
             label.textAlignment = NSTextAlignment.center
+            label.tag = index
             
             //添加手势
             label.isUserInteractionEnabled = true
@@ -84,7 +92,7 @@ extension PageTitleView{
         }
     }
     
-    @objc private func titleLabelTab(tabGes: UITapGestureRecognizer){
+    @objc  func titleLabelTab(tabGes: UITapGestureRecognizer){
         guard let label = tabGes.view as? UILabel else{return}
         
         if label == selectLabel {
@@ -98,6 +106,8 @@ extension PageTitleView{
         UIView.animate(withDuration: 0.25) {
             self.scrollLine.center.x = label.center.x
         }
+        
+        delegate?.pageTitleViewClicked(titleView: self, index: label.tag)
     }
     
     private func setupBottomLine(){
@@ -118,3 +128,17 @@ extension PageTitleView{
         scrollView.addSubview(scrollLine)
     }
 }
+
+//MARK:- 外部方法
+extension PageTitleView{
+    func pageTitleView(fromIndex: Int, toIndex: Int, process: CGFloat) {
+        
+        let fromLabel = titleLabels[fromIndex]
+        let targetLabel = titleLabels[toIndex]
+        
+        self.scrollLine.center.x = fromLabel.center.x + fromLabel.frame.width * process
+        
+    }
+}
+
+
