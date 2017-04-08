@@ -136,8 +136,29 @@ extension PageTitleView{
         let fromLabel = titleLabels[fromIndex]
         let targetLabel = titleLabels[toIndex]
         
+        selectLabel = targetLabel
+        if fromIndex == toIndex {
+            targetLabel.textColor = UIColor.orange
+            
+            for label in titleLabels{
+                if label != targetLabel {
+                    label.textColor = UIColor.darkGray
+                }
+            }
+            
+            self.scrollLine.center.x = targetLabel.center.x
+            
+            return
+        }
+        
         self.scrollLine.center.x = fromLabel.center.x + fromLabel.frame.width * process
         
+        let pro = abs(process)
+        
+        fromLabel.textColor = UIColor.mixColor(sourceColor: UIColor.orange, targetColor: UIColor.darkGray, ratio: pro)
+        
+        targetLabel.textColor = UIColor.mixColor(sourceColor: UIColor.darkGray, targetColor: UIColor.orange, ratio: pro)
+   
     }
 }
 

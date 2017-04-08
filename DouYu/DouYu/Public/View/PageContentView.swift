@@ -18,8 +18,6 @@ class PageContentView: UIView {
     
     fileprivate let childVCs: [UIViewController]
     
-    fileprivate var currentPage = 0
-    
     fileprivate var oldOffsetX: CGFloat = 0
     
     fileprivate var isScroll: Bool = false
@@ -59,12 +57,10 @@ class PageContentView: UIView {
         isScroll = false
         let indexPath = IndexPath(item: index, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
-        currentPage = index
     }
 
 }
 
-private var oldOffset: CGFloat = 0
 
 extension PageContentView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate{
     
@@ -110,44 +106,34 @@ extension PageContentView: UICollectionViewDataSource, UICollectionViewDelegate,
     
     func scrollViewDidScroll(_ scrollView: UIScrollView){
         
-        if !isScroll {
-            return
-        }
+        if !isScroll { return }
         
         var process: CGFloat = 0
-        var offset: CGFloat = 0
+        var sourcePage:Int = 0
+        var targetPage:Int = 0
+        let offset: CGFloat = scrollView.contentOffset.x.truncatingRemainder(dividingBy: bounds.width)
         
-        let direction = scrollView.contentOffset.x - oldOffsetX
-        
-        if direction > 0 {
-            offset = scrollView.contentOffset.x.truncatingRemainder(dividingBy: bounds.width)
+        if scrollView.contentOffset.x > oldOffsetX {
+            sourcePage = Int(scrollView.contentOffset.x / bounds.width)
+            targetPage = sourcePage + 1 > childVCs.count - 1 ? childVCs.count - 1 : sourcePage + 1
             process = offset / bounds.width
-            
-            if process == 0 {
-                currentPage += 1
-                return
+            if scrollView.contentOffset.x - oldOffsetX == bounds.width {
+                targetPage = sourcePage
+                process = 1
             }
-            
-            let targetIndex = (currentPage + 1 < childVCs.count) ? currentPage + 1 : currentPage
-            
-            delegate?.pageContentView(self, sourceItem: currentPage, targetItem: targetIndex, process: process)
-        }else if direction < 0{
-            
-            offset = scrollView.contentOffset.x.truncatingRemainder(dividingBy: bounds.width)
+        }else if scrollView.contentOffset.x < oldOffsetX{
+            targetPage = Int(scrollView.contentOffset.x / bounds.width)
+            sourcePage = targetPage + 1
             process = offset / bounds.width - 1
-            
-            if process == -1 {
-                currentPage -= 1
-                return
+            if oldOffsetX - scrollView.contentOffset.x == bounds.width {
+                sourcePage = targetPage
+                process = 1
             }
-            
-            let targetIndex = (currentPage - 1 < 0) ? currentPage : currentPage - 1
-            
-            print("currentPage \(currentPage), targetIndex \(targetIndex)")
-            
-            delegate?.pageContentView(self, sourceItem: currentPage, targetItem: targetIndex, process: process)
-            
         }
+        
+        print("source: \(sourcePage) target: \(targetPage) process: \(process)")
+
+        delegate?.pageContentView(self, sourceItem: sourcePage, targetItem: targetPage, process: process)
     }
     
     
