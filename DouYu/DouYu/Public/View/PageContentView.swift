@@ -124,14 +124,14 @@ extension PageContentView: UICollectionViewDataSource, UICollectionViewDelegate,
         }else if scrollView.contentOffset.x < oldOffsetX{
             targetPage = Int(scrollView.contentOffset.x / bounds.width)
             sourcePage = targetPage + 1
-            process = offset / bounds.width - 1
+            process = 1 - offset / bounds.width
             if oldOffsetX - scrollView.contentOffset.x == bounds.width {
                 sourcePage = targetPage
                 process = 1
             }
         }
         
-        print("source: \(sourcePage) target: \(targetPage) process: \(process)")
+//        print("source: \(sourcePage) target: \(targetPage) process: \(process)")
 
         delegate?.pageContentView(self, sourceItem: sourcePage, targetItem: targetPage, process: process)
     }
