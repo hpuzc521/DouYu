@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5929B40A1EA267B6000672A1 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B4081EA267B6000672A1 /* CollectionHeaderView.swift */; };
+		5929B40B1EA267B6000672A1 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5929B4091EA267B6000672A1 /* CollectionHeaderView.xib */; };
+		5929B40D1EA340A5000672A1 /* UIFont-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5929B40C1EA340A5000672A1 /* UIFont-Extension.swift */; };
 		59EE5AE01E90D08F00CD2CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE5ADF1E90D08F00CD2CC7 /* AppDelegate.swift */; };
 		59EE5AE51E90D08F00CD2CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AE31E90D08F00CD2CC7 /* Main.storyboard */; };
 		59EE5AE71E90D08F00CD2CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EE5AE61E90D08F00CD2CC7 /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5929B4081EA267B6000672A1 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		5929B4091EA267B6000672A1 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		5929B40C1EA340A5000672A1 /* UIFont-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont-Extension.swift"; sourceTree = "<group>"; };
 		59EE5ADC1E90D08F00CD2CC7 /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EE5ADF1E90D08F00CD2CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59EE5AE41E90D08F00CD2CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				59EE5B391E954D4E00CD2CC7 /* UIColor-Extension.swift */,
+				5929B40C1EA340A5000672A1 /* UIFont-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 		59F653431E9A1A2E00F53A31 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5929B4081EA267B6000672A1 /* CollectionHeaderView.swift */,
+				5929B4091EA267B6000672A1 /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F653471E9A1A2E00F53A31 /* Home.storyboard in Resources */,
+				5929B40B1EA267B6000672A1 /* CollectionHeaderView.xib in Resources */,
 				59EE5AFF1E916A1E00CD2CC7 /* Focus.storyboard in Resources */,
 				59EE5AE71E90D08F00CD2CC7 /* Assets.xcassets in Resources */,
 				59EE5B011E916A3400CD2CC7 /* Discovery.storyboard in Resources */,
@@ -290,9 +300,11 @@
 				59EE5AE01E90D08F00CD2CC7 /* AppDelegate.swift in Sources */,
 				59EE5B2C1E921B0700CD2CC7 /* DiscoveryViewController.swift in Sources */,
 				59EE5B371E95441300CD2CC7 /* PageContentView.swift in Sources */,
+				5929B40D1EA340A5000672A1 /* UIFont-Extension.swift in Sources */,
 				59EE5B2A1E921AF600CD2CC7 /* FocusViewController.swift in Sources */,
 				59F6534A1E9A1B0100F53A31 /* RecommendViewController.swift in Sources */,
 				59EE5B351E93733D00CD2CC7 /* Common.swift in Sources */,
+				5929B40A1EA267B6000672A1 /* CollectionHeaderView.swift in Sources */,
 				59EE5B2E1E921B1600CD2CC7 /* MineViewController.swift in Sources */,
 				59F653481E9A1A2E00F53A31 /* HomeViewController.swift in Sources */,
 				59EE5B241E921A9A00CD2CC7 /* MainTabViewController.swift in Sources */,
